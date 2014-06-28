@@ -11,7 +11,7 @@ var path = require('path')
 // on OSX (Darwin), a launchd daemon will get installed as: com.sample.myserver
 // on Linux, a start-stop-daemon will get installed as: myserver
 
-var svcinstall = new sim.SvcInstall('com.sample', 'myserver');
+var svcinstall = new sim.SvcInstall('myserver', 'com.sample');
 
 var action = process.argv[2];
 
@@ -61,6 +61,7 @@ switch (action) {
 		svcinstall[action](function(err) {
 			if (err) {
 				console.error('Error: ', err);
+				return;
 			}
 
 			console.log(action + ': Success.');			

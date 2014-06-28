@@ -1,7 +1,7 @@
 {
   "name": "svcinstall",
-  "version": "0.0.1",
-  "description": "Node service installer",
+  "version": "0.1.1",
+  "description": "Service installer for OSX and Linux",
   "main": "./lib/svcinstall.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

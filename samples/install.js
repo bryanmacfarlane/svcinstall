@@ -10,7 +10,7 @@ var options = {
 		workingDirectory: path.dirname(scriptPath)
 	};
 
-var svcinstall = new sim.SvcInstall('com.sample', 'myserver');
+var svcinstall = new sim.SvcInstall('myserver', 'com.sample');
 svcinstall.install(options, function(err){
 	if (err) {
 		console.error('Error:', err.message);
@@ -21,7 +21,8 @@ svcinstall.install(options, function(err){
 
 	svcinstall.start(function(err) {
 		if (err) {
-			console.error('Failed to start: ', err);
+			console.error('Failed to start: ', err.message);
+			return;
 		}
 
 		console.log('Started Successfully');
