@@ -13,6 +13,8 @@ SvcInstall installs services on OSX (launchd) and Linux (inet.d start-stop-dameo
     npm install svcinstall --save
 
 
+## Sample:
+See /samples for more
 
 ```js
 var path = require('path');
@@ -24,7 +26,7 @@ var options = {
 		workingDirectory: path.dirname(scriptPath)
 	};
 
-var svcinstall = new sim.SvcInstall('myserver', 'com.sample');
+var svcinstall = new si.SvcInstall('myserver', 'com.sample');
 svcinstall.install(options, function(err){
 	if (err) {
 		console.error('Error:', err.message);
