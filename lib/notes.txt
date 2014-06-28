@@ -1,0 +1,51 @@
+
+==========================
+Svc Management:
+==========================
+
+OSX:
+----------------------------
+Load:
+sudo launchctl load /Library/LaunchDaemons/com.sample.myserver.plist
+
+Unload:
+sudo launchctl unload /Library/LaunchDaemons/com.sample.myserver.plist
+
+Status of service:
+$> sudo launchctl list | grep sample
+pid     rc  name
+29119	-	com.sample.myserver
+
+validate plist:
+plutil -lint /Library/LaunchDaemons/com.sample.myserver.plist 
+/Library/LaunchDaemons/com.sample.myserver.plist: OK
+
+==========================
+OS Detection:
+==========================
+
+require('os').type() => 'Darwin' or 'Linux'
+
+OSX:
+----------------------------
+https://coderwall.com/p/4yz8dq
+$> which sw_vers
+/usr/bin/sw_vers
+$> sw_vers
+ProductName:	Mac OS X
+ProductVersion:	10.9.3
+BuildVersion:	13D65
+
+Linux:
+---------------
+which lsb_release
+$> lsb_release -a
+
+Sample outputs:
+
+No LSB modules are available.
+Distributor ID:	Debian
+Description:	Debian GNU/Linux 6.0.1 (squeeze)
+Release:	6.0.1
+Codename:	squeeze
+

@@ -1,0 +1,28 @@
+{
+  "name": "svcinstall",
+  "version": "0.0.1",
+  "description": "Node service installer",
+  "main": "./lib/svcinstall.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bryanmacfarlane/svcinstall"
+  },
+  "keywords": [
+    "node.js",
+    "service",
+    "install"
+  ],
+  "author": "Bryan MacFarlane",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/bryanmacfarlane/svcinstall/issues"
+  },
+  "homepage": "https://github.com/bryanmacfarlane/svcinstall",
+  "dependencies": {
+    "plist": "^1.0.1",
+    "shelljs": "^0.3.0"
+  }
+}
