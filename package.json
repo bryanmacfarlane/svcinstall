@@ -1,6 +1,6 @@
 {
   "name": "svcinstall",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Service installer for OSX and Linux",
   "main": "./lib/svcinstall.js",
   "scripts": {
