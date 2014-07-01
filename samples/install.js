@@ -7,7 +7,8 @@ var scriptPath = path.join(__dirname, 'server.js');
 
 var options = { 
 		args: [nodePath, scriptPath],
-		workingDirectory: path.dirname(scriptPath)
+		workingDirectory: path.dirname(scriptPath),
+		env: { "ENV_VAR1": "Value 1", "ENV_VAR2": "Value 2",}
 	};
 
 var svcinstall = new sim.SvcInstall('myserver', 'com.sample');
