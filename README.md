@@ -8,9 +8,6 @@ SvcInstall installs services on OSX (launchd) and Linux (inet.d start-stop-dameo
 >  - Can point a node project, a shell script, etc... Whatever you choose.
 >  - Package installer with your app or service
 
-**Caution:** 
-*Early Alpha that sort of works*
-
 ## Install:
 
     npm install svcinstall --save
@@ -29,8 +26,8 @@ var options = {
 		workingDirectory: path.dirname(scriptPath)
 	};
 
-var svcinstall = new si.SvcInstall('myserver', 'com.sample');
-svcinstall.install(options, function(err){
+var svcinstall = new si.SvcInstall();
+svcinstall.install('myserver.com.sample', options, function(err, config){
 	if (err) {
 		console.error('Error:', err.message);
 		return;
@@ -38,7 +35,7 @@ svcinstall.install(options, function(err){
 
 	console.log('Installed Successfully');
 
-	svcinstall.start(function(err) {
+	svcinstall.start(config.definition, function(err) {
 		if (err) {
 			console.error('Failed to start: ', err.message);
 			return;
