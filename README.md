@@ -1,6 +1,6 @@
 # SvcInstall
 
-SvcInstall installs services on OSX (launchd) and Linux (inet.d start-stop-dameon)
+SvcInstall installs services on OSX (launchd) and Linux (systemd)
 
 
 >  - Small and lightweight
@@ -21,7 +21,7 @@ var path = require('path');
 var si = require('svcinstall');
 
 var scriptPath = path.join(__dirname, 'server.js');
-var options = { 
+var options = {
 		args: ['/usr/local/bin/node', scriptPath],
 		workingDirectory: path.dirname(scriptPath)
 	};
